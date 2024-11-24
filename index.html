@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- styles css -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <!-- CORMORANT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300&display=swap" rel="stylesheet">
+    <!-- INTER -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- scripts -->
+    <script src="./scripts/ferst_ewb.js" defer></script>
+
+    <!-- icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- label -->
+    <title>D&D</title>
+</head>
+<body>
+    <div class="login">
+        <div class="log_box">
+            <form action="">
+                <h1>Add a character</h1>
+                <div class="input_box">
+                    <input type="text" placeholder="Username">
+                </div>
+                <div class="input_box">
+                    <input type="text" placeholder="Charactername" id="Charactername">
+                    <i class='bx bx-refresh' onclick="toggleButtons(this)">
+                        <div class="button button-1">
+                            <img onclick="fetchRandomName('ork')" src="./images/token_1.png" alt="ork"></div>
+                        <div class="button button-2">
+                            <img onclick="fetchRandomName('elf')" src="./images/token_8.png" alt="elf"></div>
+                        <div class="button button-3">
+                            <img onclick="fetchRandomName('dworf')" src="./images/token_3.png" alt="dworf"></div>
+                        <div class="button button-4">
+                            <img onclick="fetchRandomName('tifling')" src="./images/token_4.png" alt="tifling"></div>
+                        <div class="button button-5">
+                            <img onclick="fetchRandomName('people')" src="./images/token_5.png" alt="people"></div>
+                        <div class="button button-6">
+                            <img onclick="fetchRandomName('gnom')" src="./images/token_6.png" alt="gnom"></div>
+                        <div class="button button-7">
+                            <img onclick="fetchRandomName('dragon')" src="./images/token_7.png" alt="dragon"></div>
+                    </i>
+                </div>
+                <div class="remember">
+                    <label for=""><input type="checkbox">Remember</label>
+                </div>
+                <button type="submit" class="butt">Login</button>
+            </form>
+        </div>
+    </div>
+    <div class="character">
+        <div class="caracter_box">
+            <div id="image-container" class="char_img">
+                <img src="./img_characters/tif.png" alt="">
+            </div>
+            <div class="choice_img" id="image-gallery">
+                <div class="choice" id="gallery">
+                    <img src="./img_characters/TEST_CHARACTER.png" class="thumbnail">
+                    <img src="./img_characters/tif.png" class="thumbnail">
+                    <img src="./img_characters/maus.png" class="thumbnail">
+                    <img src="./img_characters/bard.png" class="thumbnail">
+                    <img src="./img_characters/test.png" class="thumbnail">
+                </div>
+                <button type="file" id="customButton" accept="image/*">
+                    <span class="button-text">Add</span>
+                    <span class="button-icon"><i class='bx bx-plus-circle'></i></span>
+                </button>
+                <input type="file" id="imageInput" accept="image/*" style="display: none;">
+            </div>
+        </div>
+    </div>
+    <script src="./add_img.js" defer></script>
+</body>
+</html>
